@@ -1,0 +1,39 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+#minesweeper {
+  display: grid;
+  grid-template-columns: repeat(10, 40px);
+  gap: 2px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.cell {
+  width: 40px;
+  height: 40px;
+  background-color: lightgray;
+  border: 1px solid #999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+  user-select: none;
+}
+
+.cell.revealed {
+  background-color: #ddd;
+  cursor: default;
+}
+
+.cell.bomb {
+  background-color: red;
+}
+
+.cell.flag {
+  background-color: yellow;
+}
